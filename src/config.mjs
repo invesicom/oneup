@@ -1,14 +1,14 @@
 export const SITE = {
-	name: 'AstroWind',
+	name: 'One Up Digital',
 
 	origin: 'https://astrowind.vercel.app',
 	basePathname: '/',
 
-	title: 'AstroWind — Your website with Astro + Tailwind CSS',
-	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+	title: 'One Up Digital',
+	description: 'One Up Digital',
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+	googleSiteVerificationId: '',
 };
 
 export const BLOG = {
@@ -31,7 +31,7 @@ export const BLOG = {
 	},
 
 	tag: {
-		disabled: false,
+		disabled: true,
 		pathname: 'tag', // set empty to change from /tag/some-tag to /some-tag
 	},
 };
