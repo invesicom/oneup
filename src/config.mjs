@@ -1,7 +1,7 @@
 export const SITE = {
 	name: 'One Up Digital',
 
-	origin: 'https://astrowind.vercel.app',
+	origin: 'https://wonderful-valkyrie-e5a128.netlify.app',
 	basePathname: '/',
 	trailingSlash: false,
 
