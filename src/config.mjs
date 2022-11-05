@@ -3,6 +3,7 @@ export const SITE = {
 
 	origin: 'https://astrowind.vercel.app',
 	basePathname: '/',
+	trailingSlash: false,
 
 	title: 'One Up Digital',
 	description: 'One Up Digital',
@@ -13,7 +14,7 @@ export const SITE = {
 
 export const BLOG = {
 	disabled: false,
-	postsPerPage: 4,
+	postsPerPage: 12,
 
 	blog: {
 		disabled: false,

@@ -4,6 +4,10 @@ const colors = require('tailwindcss/colors');
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
 	theme: {
+		container: {
+			padding: '2rem',
+			center: true
+		},
 		extend: {
 			colors: {
 				primary: colors.blue,
@@ -13,6 +17,14 @@ module.exports = {
 				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
 			},
 		},
+		screens: {
+			'xs': '480px',
+			'sm': '600px',
+			'md': '782px',
+			'lg': '960px',
+			'xl': '1280px',
+			'2xl': '1440px'
+		}
 	},
 	plugins: [require('@tailwindcss/typography')],
 	darkMode: 'class',

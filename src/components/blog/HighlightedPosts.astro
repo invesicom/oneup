@@ -9,7 +9,6 @@ const ids = [
 	'get-started-website-with-astro-tailwind-css',
 	'how-to-customize-astrowind-to-your-brand',
 	'useful-resources-to-create-websites',
-	'astrowind-template-in-depth',
 ];
 
 const items = await Promise.all(
@@ -17,42 +16,58 @@ const items = await Promise.all(
 );
 ---
 
-<section class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
-	<div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-		<h2 class="max-w-lg mb-2 text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group font-heading">
-			<span class="inline-block mb-1 sm:mb-4">Find out more content<br class="hidden md:block" /> in our Blog</span>
-		</h2>
+<section class="px-4 py-16 bg-gray-900 lg:py-20 relative">
+	<div class="absolute bottom-0 right-0 -mb-48 md:inset-y-0">
+        <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/pricing/8/lines.svg" alt="" />
+    </div>
 
-		<p class="text-gray-700 dark:text-slate-400 lg:text-sm lg:max-w-md">
-			The blog will be used to display AstroWind documentation. Each new article will be an important step that you will
-			need to know to be an expert in creating a website using Astro + Tailwind CSS The blog does not exist yet, but
-			very soon. Astro is a very interesting technology. Thanks.
-		</p>
-	</div>
+	<div class="container">
+		<div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+			<h2 class="max-w-lg mb-2 text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group font-heading">
+				<span class="inline-block mb-1 sm:mb-4">Find out more content<br class="hidden md:block" /> in our Blog</span>
+			</h2>
 
-	<div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-4 -mb-6">
-		{
-			items.map((post) => (
-				<article class="mb-6 transition">
-					<Picture
-						src={post.image}
-						class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
-						widths={[400, 900]}
-						sizes="(max-width: 900px) 400px, 900px"
-						alt={post.title}
-						aspectRatio="16:9"
-					/>
-					<h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl font-heading">
-						<a
-							href={getPermalink(post.slug, 'post')}
-							class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
-						>
-							{post.title}
-						</a>
-					</h3>
-					<p class="text-gray-700 dark:text-gray-400">{post.excerpt || post.description}</p>
-				</article>
-			))
-		}
+			<p class="text-gray-700 dark:text-slate-400 lg:text-sm lg:max-w-md">
+				The blog will be used to display AstroWind documentation. Each new article will be an important step that you will
+				need to know to be an expert in creating a website using Astro + Tailwind CSS The blog does not exist yet, but
+				very soon. Astro is a very interesting technology. Thanks.
+			</p>
+		</div>
+
+		<div class="grid gap-6 row-gap-5 md:grid-cols-3 -mb-6">
+			{
+				items.map((post) => (
+					<div class="relative group">
+						<div class="overflow-hidden rounded-md aspect-w-4 aspect-h-3">
+							<Picture
+								src={post.image}
+								class="object-cover w-full h-full transition-all duration-200 group-hover:scale-110 group-hover:rotate-3"
+								widths={[400, 900]}
+								sizes="(max-width: 900px) 400px, 900px"
+								alt={post.title}
+								aspectRatio="16:9"
+							/>
+						</div>
+						<h3 class="mt-3 text-xl font-normal">
+							<a
+								href={getPermalink(post.slug, 'post')}
+								class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
+							>
+								{post.title}
+							</a>
+						</h3>
+						<div class="mt-6">
+							<a href={getPermalink(post.slug, 'post')} title={post.title} class="flex items-center text-gray-400" role="button">
+							<span class="w-32 transition-all duration-300 lg:opacity-0 lg:group-hover:opacity-100"> Read Full Article </span>
+								<svg class="w-5 h-5 text-gray-400 transition-all duration-200 transform lg:-translate-x-32 lg:group-hover:translate-x-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+								</svg>
+								<span class="absolute inset-0" aria-hidden="true"></span>
+							</a>
+						</div>
+					</div>
+				))
+			}
+		</div>
 	</div>
 </section>
