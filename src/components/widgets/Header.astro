@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
 import Logo from '~/components/atoms/Logo.astro';
-import ToggleTheme from '~/components/core/ToggleTheme.astro';
 import ToggleMenu from '~/components/core/ToggleMenu.astro';
 
 import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permalinks';
@@ -14,12 +13,11 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 				<Logo />
 			</a>
 			<div class="flex items-center md:hidden">
-				<ToggleTheme />
 				<ToggleMenu />
 			</div>
 		</div>
 		<nav
-			class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto"
+			class="items-center w-full md:w-auto hidden md:flex text-slate-200 h-screen md:h-auto"
 			aria-label="Main navigation"
 			id="menu"
 		>
@@ -28,20 +26,20 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 			>
 				<li>
 					<a
-						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="font-medium hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
 						href="#">Pages</a
 					>
 				</li>
 				<li>
 					<a
-						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="font-medium hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
 						href={getPermalink('useful-resources-to-create-websites', 'post')}
 						>Resources
 					</a>
 				</li>
 				<li>
 					<a
-						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="font-medium hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
 						href={getBlogPermalink()}>Blog</a
 					>
 				</li>

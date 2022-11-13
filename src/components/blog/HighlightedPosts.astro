@@ -16,14 +16,14 @@ const items = await Promise.all(
 );
 ---
 
-<section class="px-4 py-16 bg-gray-900 lg:py-20 relative">
+<section class="px-4 py-16 bg-slate-900 lg:py-20 relative">
 	<div class="absolute bottom-0 right-0 -mb-48 md:inset-y-0">
         <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/pricing/8/lines.svg" alt="" />
     </div>
 
 	<div class="container">
 		<div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
-			<h2 class="max-w-lg mb-2 text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group font-heading">
+			<h2 class="max-w-lg mb-2 text-3xl font-bold text-slate-300 tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group font-heading">
 				<span class="inline-block mb-1 sm:mb-4">Find out more content<br class="hidden md:block" /> in our Blog</span>
 			</h2>
 
@@ -51,7 +51,7 @@ const items = await Promise.all(
 						<h3 class="mt-3 text-xl font-normal">
 							<a
 								href={getPermalink(post.slug, 'post')}
-								class="hover:text-primary-600 underline underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
+								class="hover:text-white underline text-slate-300 underline-offset-4 decoration-1 decoration-dotted transition ease-in duration-200"
 							>
 								{post.title}
 							</a>
